@@ -23,14 +23,18 @@ btnLogin.addEventListener('click', function (event) {
 if (email == "recepcao@scouter.com.br") {
     axios.post("http://scouterservices.com.br/ScouterServices/rest/auth/jwt", data, config)
         .then(function (response) {;
-
+            localStorage.clear();
             localStorage.setItem('token', 'Bearer ' + response.data.token);
             location.href = "inicio-r.html";
-
-        })    
+        })
+        .catch(function (error) {
+            console.log(error.response);
+            alert("Email ou Senha incorretos");
+        });    
 }else{
     axios.post("http://scouterservices.com.br/ScouterServices/rest/auth/jwt", data, config)
         .then(function (response) {;
+            localStorage.clear();
             localStorage.setItem('token', 'Bearer ' + response.data.token);
             location.href = "inicio.html";
         })

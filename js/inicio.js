@@ -2,16 +2,10 @@ var nomeUsuarioLogado = localStorage.getItem('nomeUsuarioLogado');
 var emailUsuarioLogado = localStorage.getItem('emailUsuarioLogado');
 var tipoUsuarioLogado = localStorage.getItem('tipoUsuarioLogado');
 
-//voltou tudo
-
 //--------------------------- CONFIG DE TOKEN ---------------------------------------------------------------------
 
 
 var token = parseJwt(localStorage.getItem('token'));
-
-let config = {
-    headers: { 'Authorization': token.tokenBRQ }
-};
 
 var configLocal = {
     headers: {

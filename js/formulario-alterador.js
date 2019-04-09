@@ -1,5 +1,6 @@
 var nomeUsuarioLogado = localStorage.getItem('nomeUsuarioLogado');
 var emailUsuarioLogado = localStorage.getItem('emailUsuarioLogado');
+var tipoUsuarioLogado = localStorage.getItem('tipoUsuarioLogado');
 
 //--------------------------- CONFIG DE TOKEN ---------------------------------------------------------------------
 var tokenLocal = parseJwt(localStorage.getItem('token'));

@@ -1,6 +1,7 @@
 var tipoUsuarioLogado = localStorage.getItem('tipoUsuarioLogado');
+console.log(tipoUsuarioLogado);
 
-if (tipoUsuarioLogado === 'PROPRIETARIO' ^ tipoUsuarioLogado === 'ADM') {
+if (tipoUsuarioLogado === 'PROPRIETARIO') {
 
     const component = document.getElementById("component");
 
@@ -65,8 +66,8 @@ if (tipoUsuarioLogado === 'PROPRIETARIO' ^ tipoUsuarioLogado === 'ADM') {
     imgLogout.setAttribute('src', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ9SURBVFhH7ZXNi41hHIZPM2NmZ2ThoywoC1mYxWyokcVYUUpIWCgMYcHCZtTYyML/YKSoWZASM0kpH2nSpIaSsFZqaERo0pzj+h3XOc30fpyvsZiaq+6ec+7f/dzvc2be95zCEouWYrG4Ej1Hg1r/Dy6yEQ2hdVqFUqnUh0p4b7TKYB3AO83aqdU8lLRRdgnNeLHLjjIPwPsf+u9YerUbh4IudC/KAl4/Qqsd5x3gIJpy9hvtd1Q/7G1nY/nilhx3VIVR6gECvLg/xpzPoD2O6oMNQ26Oi/drz4Nx5gECRvEhRsxMs6x3lA/BTWz448aj2gkY5x4gYNzJ/KW5Me18CN52w6hWKkRqHiAgUv1A0KedDsFVlTBrj3YqUWYu9wABmetmb2qlQ+akwVdamRCr+wBzst9Z2rWTELhm8KpWJsQaOUDckJXvh+y/LPMnho5oZUKs7gME5MbN79NKwvC1oV1amRBr9ACj5ge0kjB8YajmtxexbnKP0QWtXMg9tfuQVhKGdwyd01ow6Pxo9w6tJAyvGBrRWhDoi8d7FhWpX6OdhPm2OAB8Q63/nAq9J6KUdUIrHTLx8/vJ8BntlqAqHsG3dl7UzobQWcOfWVZoNw09p+z7wtKtnQ2hZYQ/uOkhS/Y3Vw3Y20vHT7vqv7EJ98zZeAt1OaobL175d95naeyDsGkvqvwwjaPNjnIh3kF2AP1y7yRL7T99GmzcScFXi+IwN1j7WTuMVMGPRy0uXL7hAl4/QMuNNAcFG9BdO8vwfhpNojH0DL1Hs45jPoXO87LNmtahcCsajvJ/l5kPfjCBBnnb8tOTCeXxXG9Bu9ExdBhtR2uNLLGYKBT+Aj5nmr/wEo2qAAAAAElFTkSuQmCC');
     aLogout.appendChild(imgLogout);
 
-} else if (tipoUsuarioLogado === 'RECEPCAO'){
-    
+} else if (tipoUsuarioLogado === 'RECEPCAO') {
+
     const component = document.getElementById("component");
 
     divPai = document.createElement('div');
@@ -77,6 +78,19 @@ if (tipoUsuarioLogado === 'PROPRIETARIO' ^ tipoUsuarioLogado === 'ADM') {
     ulPai = document.createElement('ul');
     ulPai.setAttribute('id', 'pai');
     divPai.appendChild(ulPai);
+
+    //------------ CRIANDO BOTÃO INICIO ---------------
+
+    let liInicio = document.createElement('li');
+    pai.appendChild(liInicio);
+
+    let aInicio = document.createElement('a');
+    aInicio.setAttribute('href', 'inicio.html');
+    liInicio.appendChild(aInicio);
+
+    let imgInicio = document.createElement('img');
+    imgInicio.setAttribute('src', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHXSURBVFhH7ZXPK8NhHMeHg2xqBxNXtJKbQlspkTis+BtcRPlxkCwnF/4BRS5ywMVVU3JQrsqvg/KraOHEpJAfm9fnu0+U7za2r++o7V2vnuf7fj7P83l/17PNYUXRaLQOKvQxu6LxEDzDFbSobb9o5oJleIJ+mIMXGInFYgVaZo9o4oUDOIdGtcXvgUdYIUSpepPMtwXmIcYiozhTcUg33ME6h3nU/hB+PZzBIeu1jFuwBrM8i9xamp7YWMQhU/AG8lZJ34T1MgjBPVxTG4RmEKUfgEPKYQNuoUvtlKJRIUxQL4FHmWcWgM1NcAF74FX7x2KPj6YeSD8Am/tAbvkiG51qZyQNEmNsVSu5KCqhdoFRvt8DalsS58kdmtczB9U2i8Uq2IEw+NX+NRGkl3PlU10Cl9pxYQTgBi7Btp9WQhj3gR7yWxK/V0z88ArHsG+YNonebg1wAvLCxWI6mTQwBrMYoAV8aseVzQCoWa1PYf7/AKx3wNg31Gi5SfSwHGCGuggY/3JfYV0uc0DLTaLGegBY1UeTOCOSD5B7AdjXjjeu8z8JUI3XpvP8HcgHsBwgzNibgk0JmcA3YO0BphOtCawNM4rMAVjshCM4tZldAlRq25yXw/EOD0JLi0V3wBsAAAAASUVORK5CYII=');
+    aInicio.appendChild(imgInicio);
 
     //------------ CRIANDO BOTÃO LOGOUT ---------------
 
@@ -91,7 +105,7 @@ if (tipoUsuarioLogado === 'PROPRIETARIO' ^ tipoUsuarioLogado === 'ADM') {
     imgLogout.setAttribute('src', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ9SURBVFhH7ZXNi41hHIZPM2NmZ2ThoywoC1mYxWyokcVYUUpIWCgMYcHCZtTYyML/YKSoWZASM0kpH2nSpIaSsFZqaERo0pzj+h3XOc30fpyvsZiaq+6ec+7f/dzvc2be95zCEouWYrG4Ej1Hg1r/Dy6yEQ2hdVqFUqnUh0p4b7TKYB3AO83aqdU8lLRRdgnNeLHLjjIPwPsf+u9YerUbh4IudC/KAl4/Qqsd5x3gIJpy9hvtd1Q/7G1nY/nilhx3VIVR6gECvLg/xpzPoD2O6oMNQ26Oi/drz4Nx5gECRvEhRsxMs6x3lA/BTWz448aj2gkY5x4gYNzJ/KW5Me18CN52w6hWKkRqHiAgUv1A0KedDsFVlTBrj3YqUWYu9wABmetmb2qlQ+akwVdamRCr+wBzst9Z2rWTELhm8KpWJsQaOUDckJXvh+y/LPMnho5oZUKs7gME5MbN79NKwvC1oV1amRBr9ACj5ge0kjB8YajmtxexbnKP0QWtXMg9tfuQVhKGdwyd01ow6Pxo9w6tJAyvGBrRWhDoi8d7FhWpX6OdhPm2OAB8Q63/nAq9J6KUdUIrHTLx8/vJ8BntlqAqHsG3dl7UzobQWcOfWVZoNw09p+z7wtKtnQ2hZYQ/uOkhS/Y3Vw3Y20vHT7vqv7EJ98zZeAt1OaobL175d95naeyDsGkvqvwwjaPNjnIh3kF2AP1y7yRL7T99GmzcScFXi+IwN1j7WTuMVMGPRy0uXL7hAl4/QMuNNAcFG9BdO8vwfhpNojH0DL1Hs45jPoXO87LNmtahcCsajvJ/l5kPfjCBBnnb8tOTCeXxXG9Bu9ExdBhtR2uNLLGYKBT+Aj5nmr/wEo2qAAAAAElFTkSuQmCC');
     aLogout.appendChild(imgLogout);
 
-} else {
+}else {
 
     const component = document.getElementById("component");
 
@@ -142,7 +156,4 @@ if (tipoUsuarioLogado === 'PROPRIETARIO' ^ tipoUsuarioLogado === 'ADM') {
     let imgLogout = document.createElement('img');
     imgLogout.setAttribute('src', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ9SURBVFhH7ZXNi41hHIZPM2NmZ2ThoywoC1mYxWyokcVYUUpIWCgMYcHCZtTYyML/YKSoWZASM0kpH2nSpIaSsFZqaERo0pzj+h3XOc30fpyvsZiaq+6ec+7f/dzvc2be95zCEouWYrG4Ej1Hg1r/Dy6yEQ2hdVqFUqnUh0p4b7TKYB3AO83aqdU8lLRRdgnNeLHLjjIPwPsf+u9YerUbh4IudC/KAl4/Qqsd5x3gIJpy9hvtd1Q/7G1nY/nilhx3VIVR6gECvLg/xpzPoD2O6oMNQ26Oi/drz4Nx5gECRvEhRsxMs6x3lA/BTWz448aj2gkY5x4gYNzJ/KW5Me18CN52w6hWKkRqHiAgUv1A0KedDsFVlTBrj3YqUWYu9wABmetmb2qlQ+akwVdamRCr+wBzst9Z2rWTELhm8KpWJsQaOUDckJXvh+y/LPMnho5oZUKs7gME5MbN79NKwvC1oV1amRBr9ACj5ge0kjB8YajmtxexbnKP0QWtXMg9tfuQVhKGdwyd01ow6Pxo9w6tJAyvGBrRWhDoi8d7FhWpX6OdhPm2OAB8Q63/nAq9J6KUdUIrHTLx8/vJ8BntlqAqHsG3dl7UzobQWcOfWVZoNw09p+z7wtKtnQ2hZYQ/uOkhS/Y3Vw3Y20vHT7vqv7EJ98zZeAt1OaobL175d95naeyDsGkvqvwwjaPNjnIh3kF2AP1y7yRL7T99GmzcScFXi+IwN1j7WTuMVMGPRy0uXL7hAl4/QMuNNAcFG9BdO8vwfhpNojH0DL1Hs45jPoXO87LNmtahcCsajvJ/l5kPfjCBBnnb8tOTCeXxXG9Bu9ExdBhtR2uNLLGYKBT+Aj5nmr/wEo2qAAAAAElFTkSuQmCC');
     aLogout.appendChild(imgLogout);
-
-    //console.log("É Comum");
-
 }

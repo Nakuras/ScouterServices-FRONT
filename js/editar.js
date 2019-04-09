@@ -2,13 +2,14 @@
 
 var nomeUsuarioLogado = localStorage.getItem('nomeUsuarioLogado');
 var emailUsuarioLogado = localStorage.getItem('emailUsuarioLogado');
+var tipoUsuarioLogado = localStorage.getItem('tipoUsuarioLogado');
 
 //--------------------------- CONFIG DE TOKEN ---------------------------------------------------------------------
-var tokenLocal = parseJwt(localStorage.getItem('token'));
+var token = parseJwt(localStorage.getItem('token'));
 
-var configLocal = {
+var config = {
     headers: {
-        'Authorization': tokenLocal
+        'Authorization': token
         , 'Content-Type': 'application/json'
         , 'Accept': 'application/json'
     }
@@ -18,7 +19,7 @@ var usuarioId = localStorage.getItem('idUsuario');
 
 console.log(usuarioId);
 
-    axios.get("http://scouterservices.com.br/ScouterServices/rest/usuario/" + usuarioId, configLocal)
+    axios.get("http://scouterservices.com.br/ScouterServices/rest/usuario/" + usuarioId, config)
         .then(function (response) {
 
             var usuario = response.data;
@@ -53,7 +54,7 @@ btnCadastrarpendencia.addEventListener('click', function (event) {
 
     data = JSON.stringify(envio);
 
-    axios.put("http://scouterservices.com.br/ScouterServices/rest/usuario/alterar/" + usuarioId, data, configLocal)
+    axios.put("http://scouterservices.com.br/ScouterServices/rest/usuario/alterar/" + usuarioId, data, config)
         .then(function (response) {
             location.href = "adminstrador.html";
         })
