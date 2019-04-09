@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Funcionarios</title>
+
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/formulario.css">
+    <link rel="stylesheet" type="text/css" href="css/inicio.css">
+    <link rel="stylesheet" type="text/css" href="css/administracao.css">
+    <link rel="stylesheet" type="text/css" href="css/navegador.css">
+    <script src="js/decryptToken.js"></script>
+    <script src="js_style/js02_nav.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/user.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="userside" class="usersideclass" onclick="openuser()">
+        <div id="Usuarioinform" class="usuarioinformclass">
+        </div>
+    </div>
+
+    <div id="usercloss" class="userclossclass">
+    </div>
+
+
+    <div class="Lista1">
+        <div class="Lista3">
+            <div class="wrapper">
+                <center>
+                    <h2 class="titulo">Cadastro de Usuários</h2>
+                </center>
+                <form class="contact100-form validate-form">
+
+                    <div class="wrap-input100 validate-input" data-validate="Necessário colocar nome">
+                        <span class="label-input100">Nome</span>
+                        <input id="nomeCadastro" class="input100" type="text" name="nomeCadastro" placeholder="Nome">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Necessário colocar um Telefone">
+                        <span class="label-input100">Telefone</span>
+                        <input id="numeroCadastro" class="input100" type="text" name="numeroCadastro" placeholder="Telefone">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 input100-select">
+                        <span class="label-input100">Tipo do usuário</span>
+                        <div>
+                            <select id="tipoHierarquico" class="selection-2" name="service">
+                                <option value="FUNCIONARIO" selected="selected">Comum</option>
+                                <option value="RH" selected="selected">Recursos Humano</option>
+                                <option value="RECEPCAO" selected="selected">Recepção</option>
+                                <option value="ADM" selected="selected">Administrador</option>
+                            </select>
+                        </div>
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Email invalido: exemplo@email.com">
+                        <span class="label-input100">Email</span>
+                        <input id="emailCadastro" class="input100" type="text" name="emailCadastro" placeholder="Email">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Senha requisito: mínimo 5 e máximo 32 caracteres">
+                        <span class="label-input100">Senha</span>
+                        <input id="senhaCadastro" class="input100" type="password" name="senhaCadastro" placeholder="Senha">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-contact100-form-btn">
+                        <div class="wrap-contact100-form-btn">
+                            <div class="contact100-form-bgbtn"></div>
+                            <button class="contact100-form-btn" id="btnA">
+                                <span>
+                                    Cadastrar
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="dropDownSelect1"></div>
+            <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+            <script src="vendor/select2/select2.min.js"></script>
+            <script>
+                $(".selection-2").select2({
+                    minimumResultsForSearch: 20,
+                    dropdownParent: $('#dropDownSelect1')
+                });
+            </script>
+            <!--===============================================================================================-->
+            <script src="vendor/daterangepicker/moment.min.js"></script>
+            <script src="vendor/daterangepicker/daterangepicker.js"></script>
+            <!--===============================================================================================-->
+            <script src="vendor/countdowntime/countdowntime.js"></script>
+            <!--===============================================================================================-->
+            <script src="js_style/main.js"></script>
+
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-23581568-13');
+            </script>
+
+
+        </div>
+        <div class="Lista4">
+            <center>
+                <h2 class="titulo">Usuários do Sistema</h2>
+            </center>
+            <br><br>
+            <div id="Usuario">
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- ------------------------------------------------------------ <MENU> ------------------------------------------------------------ -->
+    <div class="container">
+        <div id="component" class="component">
+            <!------------------------------------------ Start Nav Structure 4 ------------------------------------------>
+            <button class="cn-button cn-button" id="cn-button">+</button>
+
+
+            <div id="cn-overlay" class="cn-overlay"></div>
+            <!------------------------------------------------------------------------------------------------------ End Nav Structure ------------------------------------------>
+        </div>
+    </div>
+    <!------------------------------------------ </MENU> ------------------------------------------>
+
+    <div id="myModal" class="modal">
+
+    </div>
+
+    <div id="myModal2" class="modal2">
+
+    </div>
+
+    <div id="myModal3" class="modal3">
+
+    </div>
+
+    <div id="myModal4" class="modal4">
+
+    </div>
+
+    <script src="js/administracao.js"></script>
+    <script src="js/botoes.js"> </script>
+    <script src="js/slideBar.js"> </script>
+    <script src="js_style/js03_nav.js"></script>
+    <script src="js_style/js04_btn.js"></script>
+</body>
+
+</html>

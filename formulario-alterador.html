@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Clientes</title>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/formulario.css">
+	<link rel="stylesheet" type="text/css" href="css/inicio.css">
+	<link rel="stylesheet" type="text/css" href="css/administracao.css">
+	<link rel="stylesheet" type="text/css" href="css/navegador.css">
+	<link rel="stylesheet" type="text/css" href="css/inicio.css">
+	<link rel="stylesheet" type="text/css" href="css/user.css">
+	<script src="js_style/js02_nav.js"></script>
+	<script src="js/decryptToken.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<style type="text/css">
+		p{
+			text-align: center;
+			height: 30px;
+			font-size: 25px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div id="userside" class="usersideclass" onclick="openuser()">
+		<div id="Usuarioinform" class="usuarioinformclass">
+		</div>
+	</div>
+
+	<div id="usercloss" class="userclossclass">
+	</div>
+
+	<div class="Lista1">
+		<center>
+			<h2 class="titulo">Alterar Cliente</h2>
+		</center>
+
+		<p id="Nome">Nome:</p>
+        <i id="iNome">
+
+        </i>
+
+		<div class="wrap-input100 validate-input" data-validate="Necessário colocar data">
+			<span class="label-input100">Data Agendada</span>
+			<input id="dataCadastro" class="input100" type="date" name="dataCadastro" placeholder="DD/MM/YYYY">
+			<span class="focus-input100"></span>
+		</div>
+
+		<div class="wrap-input100 validate-input" data-validate="Necessário colocar um Horário">
+			<span class="label-input100">Horário</span>
+			<input id="horario" class="input100" type="time" name="horario" placeholder="00:00">
+			<span class="focus-input100"></span>
+		</div>
+
+        <div class="wrap-input100 input100-select">
+            <span class="label-input100">Status</span>
+                <div>
+                    <select id="status" class="selection-2" name="status">
+                        <option value="AUSENTE" selected="selected">Ausente</option>
+                        <option value="PENDENTE" selected="selected">Pendente</option>
+                        <option value="COMPARECEU" selected="selected">Compareceu</option>
+                    </select>
+                </div>
+            <span class="focus-input100"></span>
+        </div>
+
+		<br>
+
+		<div class="container-contact100-form-btn">
+			<div class="wrap-contact100-form-btn">
+				<div class="contact100-form-bgbtn"></div>
+					<button class="contact100-form-btn" id="btnCriarPendencia">
+						<span>
+							Alterar
+						</span>
+					</button>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!-- ------------------------------------------------------------ MENU ------------------------------------------------------------ -->
+	<div class="container">
+		<div id="component" class="component">
+			<!------------------------------------------ Start Nav Structure 4 ------------------------------------------>
+			<button class="cn-button cn-button" id="cn-button">+</button>
+
+
+
+			<div id="cn-overlay" class="cn-overlay"></div>
+			<!------------------------------------------ /container ------------------------------------------>
+		</div>
+		<div id="myModal" class="modal">
+		</div>
+
+		<div id="myModal2" class="modal2">
+		</div>
+
+		<div id="myModal3" class="modal3">
+		</div>
+
+		<div id="myModal4" class="modal4">
+		</div>
+
+		<script src="js/formulario-alterador.js"> </script>
+		<script src="js/botoes.js"> </script>
+		<script src="js/slideBar.js"> </script>
+		<script src="js_style/js03_nav.js"></script>
+
+</body>
+
+</html>
