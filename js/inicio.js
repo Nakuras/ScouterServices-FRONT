@@ -4,7 +4,6 @@ var tipoUsuarioLogado = localStorage.getItem('tipoUsuarioLogado');
 
 //--------------------------- CONFIG DE TOKEN ---------------------------------------------------------------------
 
-
 var token = parseJwt(localStorage.getItem('token'));
 
 var configLocal = {

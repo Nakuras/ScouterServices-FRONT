@@ -128,6 +128,12 @@ function getUrlParam(parameter, defaultvalue) {
 window.onload = function () {
     var mytext = getUrlParam('id', 'Empty');
     localStorage.setItem('idCliente', mytext);
+
+    let nomeUsuario = token.nome;
+    localStorage.setItem('nomeUsuarioLogado', nomeUsuario);
+
+    let emailUsuario = token.email;
+    localStorage.setItem('emailUsuarioLogado', emailUsuario);
     
 }
 

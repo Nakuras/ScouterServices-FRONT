@@ -90,7 +90,7 @@ let usuarios;
 
 const usuarioGrid = document.getElementById('Usuario');
 
-if (emailUsuarioLogado == "adriano@scouter.com.br") {
+if (emailUsuarioLogado == 'adriano@scouter.com.br') {
 
     axios.get("http://scouterservices.com.br/ScouterServices/rest/usuarios", config)
     .then(function (response) {

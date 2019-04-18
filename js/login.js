@@ -20,7 +20,7 @@ btnLogin.addEventListener('click', function (event) {
 
     data = JSON.stringify(envio);
 
-if (email == "recepcao@scouter.com.br") {
+if (email == "recepcao@scouter.com.br" || email == "recepcao@scouter.com") {
     axios.post("http://scouterservices.com.br/ScouterServices/rest/auth/jwt", data, config)
         .then(function (response) {;
             localStorage.clear();
