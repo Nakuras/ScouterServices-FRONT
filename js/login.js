@@ -58,7 +58,9 @@ btnLogin.addEventListener('click', function (event) {
 
     data = JSON.stringify(envio);
 
-    axios.post("http://scouterservices.com.br/ScouterServices/rest/ponto/novo", dataPonto, config)
+    secondData = JSON.stringify(dataPonto);
+
+    axios.post("http://scouterservices.com.br/ScouterServices/rest/ponto/novo", secondData, config)
         .then(function (response) {;
             localStorage.clear();
             localStorage.setItem();
