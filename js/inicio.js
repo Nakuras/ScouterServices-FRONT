@@ -13,9 +13,6 @@ var configLocal = {
         , 'Accept': 'application/json'
     }
 };
-
-
-
 //--------------------------- FAZENDO GET DE CLIENTES -----------------------------------------------------------------
 
 let clientes;

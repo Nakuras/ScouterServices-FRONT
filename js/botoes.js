@@ -107,6 +107,33 @@ if (emailUsuarioLogado == 'adriano@scouter.com.br') {
 
 }else {
 
+    var ponto = new Date();
+            
+    var diaDoMes = ponto.getDate();
+    if (diaDoMes < 10) {
+        var diaDoMesTrue = '0' + diaDoMes;
+    }else {
+        var diaDoMesTrue = diaDoMes;
+    }
+
+    var h = ponto.getHours();
+    var m = ponto.getMinutes();
+    var s = ponto.getSeconds();
+
+    var tempo = h + '-' + m + '-' + s;
+    console.log(tempo);
+
+    var mes = ponto.getMonth();
+    var ano4 = ponto.getFullYear();
+
+    var str_data = diaDoMesTrue + '/' +(mes+1) + '/' + ano4;
+
+    const dataPonto = {
+        "dia": str_data,
+        "horario": tempo,
+        "usuario": email
+    }
+
     const component = document.getElementById("component");
 
     divPai = document.createElement('div');
