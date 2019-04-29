@@ -140,6 +140,11 @@ if (emailUsuarioLogado == 'adriano@scouter.com.br') {
             botao.textContent = 'alterar';
             nomeLista.appendChild(botao);
 
+            let botao2 = document.createElement('a');
+            botao2.setAttribute('href', 'planilha.html?email=' + dadosDosUsuarios.email);
+            botao2.textContent = 'entradas';
+            nomeLista.appendChild(botao2);
+
             let hr = document.createElement('hr');
             nomeLista.appendChild(hr);
 

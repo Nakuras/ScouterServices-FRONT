@@ -47,7 +47,7 @@ btnCadastrarpendencia.addEventListener('click', function (event) {
 
     axios.post("http://scouterservices.com.br/ScouterServices/rest/cliente/novo", JSON.stringify(data), configLocal)
         .then(function (response) {
-            location.reload();
+            location.href = "inicio.html";
         })
         .catch(function (error) {
             console.log(error);

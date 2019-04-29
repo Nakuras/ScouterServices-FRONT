@@ -5,16 +5,6 @@ var config = {
     }
 };
 
-    var ponto = new Date();
-
-    var h = ponto.getHours();
-    var m = ponto.getMinutes();
-    var s = ponto.getSeconds();
-
-    var tempo = h + '-' + m + '-' + s;
-    console.log(tempo);
-
-
 const btnLogin = document.querySelector("#btn-login");
 
 btnLogin.addEventListener('click', function (event) {
@@ -41,13 +31,38 @@ btnLogin.addEventListener('click', function (event) {
     var m = ponto.getMinutes();
     var s = ponto.getSeconds();
 
-    var tempo = h + '-' + m + '-' + s;
+    if (s < 10) {
+        var seg = "0" + s;
+    }else{
+        var seg = s;
+    }
+
+    if (m < 10) {
+        var min = "0" + m;
+    }else{
+        var min = m;
+    }
+
+    if (h < 10) {
+        var hor = "0" + h;
+    }else{
+        var hor = h;
+    }
+
+    var tempo = hor + ':' + min + ':' + seg;
     console.log(tempo);
 
     var mes = ponto.getMonth();
+
+    if ((mes+1) < 10) {
+        var mesTrue = "0" + (mes+1);
+    }else{
+        var mesTrue = (mes+1);
+    }
+
     var ano4 = ponto.getFullYear();
 
-    var str_data = diaDoMesTrue + '/' +(mes+1) + '/' + ano4;
+    var str_data = diaDoMesTrue + '/' + mesTrue + '/' + ano4;
 
     const dataPonto = {
         "dia": str_data,

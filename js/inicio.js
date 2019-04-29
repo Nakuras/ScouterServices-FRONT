@@ -58,8 +58,6 @@ axios.get("http://scouterservices.com.br/ScouterServices/rest/clientes", configL
             aStatus.textContent = statusCliente;
             tdStatus.appendChild(aStatus);
 
-
-
             //------------- Situacao --------------------------
 
             let tdDia = document.createElement('td');
@@ -91,7 +89,7 @@ axios.get("http://scouterservices.com.br/ScouterServices/rest/clientes", configL
         console.log(error.response);
     });
 
-//-------------------------- Puxando chamado especifico ------------------------
+//-------------------------- Puxando cliente especifico ------------------------
 
 
 function getUrlVars() {
