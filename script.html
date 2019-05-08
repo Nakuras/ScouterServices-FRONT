@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js">
+
+<head>
+	<title>Script</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/navegador.css">
+	<link rel="stylesheet" type="text/css" href="css/inicio.css">
+	<link rel="stylesheet" type="text/css" href="css/user.css">
+	<script src="js_style/js02_nav.js"></script>
+	<script src="js/decryptToken.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<style>
+		.classeCopiador {
+  		  position: relative;
+  		  display: inline-block;
+		}
+
+		.classeCopiador .tooltiptext {
+		  visibility: hidden;
+		  width: 140px;
+		  background-color: #444;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 10px;
+		  padding: 8px;
+		  position: absolute;
+		  z-index: 1;
+		  bottom: 150%;
+		  left: 50%;
+
+		  margin-left: -75px;
+		  opacity: 1;
+		  transition: opacity 0.3s;
+
+		}
+
+		.classeCopiador .tooltiptext::after {
+		  content: "";
+		  position: absolute;
+		  top: 100%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: #444 transparent transparent transparent;
+		}
+
+		.classeCopiador:hover .tooltiptext {
+		  visibility: visible;
+		  opacity: 1;
+		}
+
+		textarea{
+			height: 100%;
+			width: 15%;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div id="userside" class="usersideclass" onclick="openuser()">
+		<div id="Usuarioinform" class="usuarioinformclass">
+		</div>
+	</div>
+
+	<div id="usercloss" class="userclossclass">
+	</div>
+
+	<!--	User ^.^	-->
+
+	<div class="Lista1"/>
+
+		<textarea id="textoCopiar">
+O Carvão
+O pequeno Zeca entra em casa, após a aula, batendo forte os seus pés no assoalho da casa. Seu pai, que estava indo para o quintal fazer alguns serviços na horta,
+ao ver aquilo chama o menino para uma conversa.
+
+Zeca, de oito anos de idade, o acompanha desconfiado. Antes que seu pai dissesse alguma coisa, fala irritado:
+- Pai estou com muita raiva. O Juca não deveria ter feito comigo. Desejo tudo de ruim para ele. Seu pai, um homem simples, mas cheio de sabedoria, escuta, 
+calmamente, o filho que continua a reclamar:
+- O Juca me humilhou na frente dos meus amigos. Não aceito. Gostaria que ele ficasse doente sem poder ir à escola.
+		</textarea>
+		<div class="classeCopiador">
+			<button onclick="copiar()" onmouseout="outFunc()">
+				<span class="tooltiptext" id="copiador">Copiar Script</span>
+				Copiar
+			</button>
+		</div>
+
+		<textarea id="textoCopiar">
+O Carvão
+O pequeno Zeca entra em casa, após a aula, batendo forte os seus pés no assoalho da casa. Seu pai, que estava indo para o quintal fazer alguns serviços na horta,
+ao ver aquilo chama o menino para uma conversa.
+
+Zeca, de oito anos de idade, o acompanha desconfiado. Antes que seu pai dissesse alguma coisa, fala irritado:
+- Pai estou com muita raiva. O Juca não deveria ter feito comigo. Desejo tudo de ruim para ele. Seu pai, um homem simples, mas cheio de sabedoria, escuta, 
+calmamente, o filho que continua a reclamar:
+- O Juca me humilhou na frente dos meus amigos. Não aceito. Gostaria que ele ficasse doente sem poder ir à escola.
+		</textarea>
+		<div class="classeCopiador">
+			<button onclick="copiar()" onmouseout="outFunc()">
+				<span class="tooltiptext" id="copiador">Copiar Script</span>
+				Copiar
+			</button>
+		</div>
+
+
+		<script>
+			function copiar() {
+				var copyText = document.getElementById("textoCopiar");
+				copyText.select();
+				document.execCommand("copy");
+  
+				var tooltip = document.getElementById("copiador");
+  				tooltip.innerHTML = "Texto Copiado";
+			}
+
+			function outFunc() {
+  				var tooltip = document.getElementById("copiador");
+	  			tooltip.innerHTML = "Copiar Script";
+			}
+		</script>
+
+	<!-- ------------------------------------------------------------ MENU ------------------------------------------------------------ -->
+	<div class="container">
+		<div id="component" class="component">
+			<!------------------------------------------ Start Nav Structure 4 ------------------------------------------>
+			<button class="cn-button cn-button" id="cn-button">+</button>
+
+
+
+			<div id="cn-overlay" class="cn-overlay"></div>
+			<!------------------------------------------ /container ------------------------------------------>
+		</div>
+		<div id="myModal" class="modal">
+		</div>
+
+		<div id="myModal2" class="modal2">
+		</div>
+
+		<div id="myModal3" class="modal3">
+		</div>
+
+		<div id="myModal4" class="modal4">
+		</div>
+
+		<script src="js/botoes.js"> </script>
+		<script src="js/slideBar.js"> </script>
+		<script src="js_style/js03_nav.js"></script>
+
+</body>
+
+</html>

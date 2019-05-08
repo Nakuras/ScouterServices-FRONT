@@ -24,11 +24,11 @@ console.log(usuarioId);
 
             var usuario = response.data;
 
-            nome = usuario.nome;
-            email = usuario.email;
-            numero = usuario.numero;
-            senha = usuario.senha;
-            tipo = usuario.tipo;
+            nomeRecebido = usuario.nome;
+            emailRecebido = usuario.email;
+            numeroRecebido = usuario.numero;
+            senhaRecebido = usuario.senha;
+            tipoRecebido = usuario.tipo;
 
         });
 
@@ -56,7 +56,7 @@ btnCadastrarpendencia.addEventListener('click', function (event) {
 
     axios.put("http://scouterservices.com.br/ScouterServices/rest/usuario/alterar/" + usuarioId, data, config)
         .then(function (response) {
-            location.href = "adminstrador.html";
+            location.href = "adminstracao.html";
         })
         .catch(function (error) {
             console.log(error);

@@ -73,8 +73,6 @@ axios.get("http://scouterservices.com.br/ScouterServices/rest/clientes", configL
             aStatus.textContent = statusCliente;
             tdStatus.appendChild(aStatus);
 
-
-
             //------------- Situacao --------------------------
 
             let tdDia = document.createElement('td');
@@ -129,10 +127,10 @@ window.onload = function () {
     var mytext = getUrlParam('id', 'Empty');
     localStorage.setItem('idCliente', mytext);
 
-    let nomeUsuario = token.nome;
+    let nomeUsuario = tokenLocal.nome;
     localStorage.setItem('nomeUsuarioLogado', nomeUsuario);
 
-    let emailUsuario = token.email;
+    let emailUsuario = tokenLocal.email;
     localStorage.setItem('emailUsuarioLogado', emailUsuario);
     
 }
